@@ -29,7 +29,7 @@ extension Texturable {
             do {
                 texture =  try textureLoader.newTexture(URL: textureURL, options: [:])
             }catch{
-                print("issue Texturable here")
+                print("issue here")
             }
         }
         return texture

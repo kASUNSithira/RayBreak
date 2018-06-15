@@ -65,9 +65,6 @@ class Primitive: Node {
     private func buildPipelineState(device: MTLDevice) {
 
 
-
-
-
     }
 //
 //

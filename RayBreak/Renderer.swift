@@ -19,7 +19,7 @@ class Renderer: NSObject {
         commandQueue = device.makeCommandQueue()
         super.init()
         basePlane = BasicScene(device: device, touchPoint: touchpoint)
-     scenes.append(basePlane)
+        scenes.append(basePlane)
     }
     
     func changeTexture(texture:MTLTexture){
@@ -42,7 +42,7 @@ class Renderer: NSObject {
     
     func touchReceived(position:CGPoint , state: Int){
         
-       scenes.append(TempScene(device: device, touchPoint: position))
+        scenes.append(TempScene(device: device, touchPoint: position))
         
         if state == 0 {
             print("drawing Started")
@@ -62,11 +62,10 @@ class Renderer: NSObject {
             if pointIndex > 2 {
                 
                 if pointIndex % 2 == 1 {
-            
+                    
                 }
-    
             }
-   
+            
         }else {
             print("drawing Finished")
         }
@@ -89,19 +88,17 @@ extension Renderer: MTKViewDelegate {
         
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)
         
-     
+        
         for scene in scenes{
             scene.render(commandEncoder: commandEncoder!, deltaTime: deltaTime)
         }
-
+        
         commandEncoder?.endEncoding()
         commandBuffer?.present(drawable)
         commandBuffer?.commit()
     }
     
-    
-    
-    
+  
 }
 
 extension CGPoint {

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67786F1620D1367A00F8A02A /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67786F1520D1367A00F8A02A /* Square.swift */; };
 		6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6795F85C20CFAA5C0033D9C2 /* aa.jpg */; };
-		786CA6A720D28F24002AA6FF /* neon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 786CA6A620D28F24002AA6FF /* neon-1.png */; };
-		786CA6A920D2911D002AA6FF /* water-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 786CA6A820D2911D002AA6FF /* water-3.png */; };
-		786CA6AB20D29942002AA6FF /* cloud-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 786CA6AA20D29942002AA6FF /* cloud-3.png */; };
-		786CA6AF20D299DF002AA6FF /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 786CA6AE20D299DF002AA6FF /* download.png */; };
-		786CA6D120D3748C002AA6FF /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 786CA6D020D3748C002AA6FF /* pattern.png */; };
+		67B27CBD20D2739E00D57273 /* neon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CBC20D2739E00D57273 /* neon.png */; };
+		67B27CBF20D2787B00D57273 /* texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CBE20D2787B00D57273 /* texture2.png */; };
+		67B27CC120D27BE000D57273 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CC020D27BE000D57273 /* texture.jpg */; };
+		67D7D55920D37A1B003C1B3E /* waterColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55820D37A1B003C1B3E /* waterColor.png */; };
 		78AE0BEF20CA37AB003DE933 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BEE20CA37AB003DE933 /* Shader.metal */; };
 		78AE0BF120CA37D0003DE933 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BF020CA37D0003DE933 /* Renderer.swift */; };
 		78AE0BF320CA37F0003DE933 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BF220CA37F0003DE933 /* Types.swift */; };
@@ -24,11 +24,8 @@
 		78AE0C0320CA38CD003DE933 /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0C0220CA38CD003DE933 /* BasicScene.swift */; };
 		78AE0C0520CA38DC003DE933 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0C0420CA38DC003DE933 /* Scene.swift */; };
 		78AE0C0720CA38E8003DE933 /* TempScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0C0620CA38E8003DE933 /* TempScene.swift */; };
-		78AE0C0920CA3948003DE933 /* BlueMarble.png in Resources */ = {isa = PBXBuildFile; fileRef = 78AE0C0820CA3948003DE933 /* BlueMarble.png */; };
 		78AE0C0B20CA3ACA003DE933 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0C0A20CA3ACA003DE933 /* Renderable.swift */; };
 		78AE0C0F20CA80AF003DE933 /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0C0E20CA80AF003DE933 /* Texturable.swift */; };
-		78AE0C1120CAAA81003DE933 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78AE0C1020CAAA80003DE933 /* test.jpg */; };
-		78AE0C1320CAAC23003DE933 /* ttt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78AE0C1220CAAC23003DE933 /* ttt.jpg */; };
 		827F9E351DB09E7C001966D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827F9E341DB09E7C001966D9 /* AppDelegate.swift */; };
 		827F9E371DB09E7C001966D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827F9E361DB09E7C001966D9 /* ViewController.swift */; };
 		827F9E3A1DB09E7C001966D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827F9E381DB09E7C001966D9 /* Main.storyboard */; };
@@ -37,12 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67786F1520D1367A00F8A02A /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		6795F85C20CFAA5C0033D9C2 /* aa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aa.jpg; sourceTree = "<group>"; };
-		786CA6A620D28F24002AA6FF /* neon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neon-1.png"; sourceTree = "<group>"; };
-		786CA6A820D2911D002AA6FF /* water-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-3.png"; sourceTree = "<group>"; };
-		786CA6AA20D29942002AA6FF /* cloud-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-3.png"; sourceTree = "<group>"; };
-		786CA6AE20D299DF002AA6FF /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
-		786CA6D020D3748C002AA6FF /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
+		67B27CBC20D2739E00D57273 /* neon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neon.png; sourceTree = "<group>"; };
+		67B27CBE20D2787B00D57273 /* texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture2.png; sourceTree = "<group>"; };
+		67B27CC020D27BE000D57273 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture.jpg; sourceTree = "<group>"; };
+		67D7D55820D37A1B003C1B3E /* waterColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterColor.png; sourceTree = "<group>"; };
 		78AE0BEE20CA37AB003DE933 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		78AE0BF020CA37D0003DE933 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		78AE0BF220CA37F0003DE933 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
@@ -54,11 +51,8 @@
 		78AE0C0220CA38CD003DE933 /* BasicScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
 		78AE0C0420CA38DC003DE933 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		78AE0C0620CA38E8003DE933 /* TempScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempScene.swift; sourceTree = "<group>"; };
-		78AE0C0820CA3948003DE933 /* BlueMarble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueMarble.png; sourceTree = "<group>"; };
 		78AE0C0A20CA3ACA003DE933 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		78AE0C0E20CA80AF003DE933 /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
-		78AE0C1020CAAA80003DE933 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		78AE0C1220CAAC23003DE933 /* ttt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ttt.jpg; sourceTree = "<group>"; };
 		827F9E311DB09E7C001966D9 /* RayBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RayBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		827F9E341DB09E7C001966D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		827F9E361DB09E7C001966D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,14 +76,10 @@
 		67B95AB920CE30F8009452CF /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				786CA6D020D3748C002AA6FF /* pattern.png */,
-				786CA6AE20D299DF002AA6FF /* download.png */,
-				786CA6AA20D29942002AA6FF /* cloud-3.png */,
-				786CA6A820D2911D002AA6FF /* water-3.png */,
-				786CA6A620D28F24002AA6FF /* neon-1.png */,
-				78AE0C0820CA3948003DE933 /* BlueMarble.png */,
-				78AE0C1020CAAA80003DE933 /* test.jpg */,
-				78AE0C1220CAAC23003DE933 /* ttt.jpg */,
+				67D7D55820D37A1B003C1B3E /* waterColor.png */,
+				67B27CBC20D2739E00D57273 /* neon.png */,
+				67B27CC020D27BE000D57273 /* texture.jpg */,
+				67B27CBE20D2787B00D57273 /* texture2.png */,
 				6795F85C20CFAA5C0033D9C2 /* aa.jpg */,
 			);
 			path = Resourses;
@@ -101,6 +91,7 @@
 				78AE0BF520CA381B003DE933 /* Node.swift */,
 				78AE0BF920CA3853003DE933 /* Primitive.swift */,
 				78AE0BF720CA3835003DE933 /* Plane.swift */,
+				67786F1520D1367A00F8A02A /* Square.swift */,
 				78AE0BFB20CA3870003DE933 /* Triangle.swift */,
 			);
 			path = Node;
@@ -222,18 +213,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78AE0C0920CA3948003DE933 /* BlueMarble.png in Resources */,
 				827F9E3F1DB09E7C001966D9 /* LaunchScreen.storyboard in Resources */,
+				67D7D55920D37A1B003C1B3E /* waterColor.png in Resources */,
+				67B27CBF20D2787B00D57273 /* texture2.png in Resources */,
 				6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */,
-				786CA6D120D3748C002AA6FF /* pattern.png in Resources */,
-				786CA6A720D28F24002AA6FF /* neon-1.png in Resources */,
-				78AE0C1320CAAC23003DE933 /* ttt.jpg in Resources */,
+				67B27CBD20D2739E00D57273 /* neon.png in Resources */,
+				67B27CC120D27BE000D57273 /* texture.jpg in Resources */,
 				827F9E3C1DB09E7C001966D9 /* Assets.xcassets in Resources */,
 				827F9E3A1DB09E7C001966D9 /* Main.storyboard in Resources */,
-				786CA6A920D2911D002AA6FF /* water-3.png in Resources */,
-				78AE0C1120CAAA81003DE933 /* test.jpg in Resources */,
-				786CA6AB20D29942002AA6FF /* cloud-3.png in Resources */,
-				786CA6AF20D299DF002AA6FF /* download.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +239,7 @@
 				78AE0BFC20CA3870003DE933 /* Triangle.swift in Sources */,
 				78AE0BFA20CA3853003DE933 /* Primitive.swift in Sources */,
 				78AE0BF620CA381B003DE933 /* Node.swift in Sources */,
+				67786F1620D1367A00F8A02A /* Square.swift in Sources */,
 				78AE0BF320CA37F0003DE933 /* Types.swift in Sources */,
 				78AE0C0520CA38DC003DE933 /* Scene.swift in Sources */,
 				78AE0C0B20CA3ACA003DE933 /* Renderable.swift in Sources */,

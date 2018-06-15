@@ -22,17 +22,17 @@ class Triangle:Primitive {
         
     }
     
-    static let coordinateRange : Float = 1.0
-    
-    private func makeRandCoord() -> Float {
-        return (Float(arc4random_uniform(1000000)) / 500000.0 - 1.0) * Triangle.coordinateRange
-    }
-    
+//    static let coordinateRange : Float = 1.0
+//    
+//    private func makeRandCoord() -> Float {
+//        return (Float(arc4random_uniform(1000000)) / 500000.0 - 1.0) * Triangle.coordinateRange
+//    }
+//    
     private func genarateVertices(touchPoint:CGPoint) ->(a:CGPoint ,b:CGPoint, c:CGPoint){
         
-        let vertex_a:CGPoint = CGPoint(x: touchPoint.x, y: touchPoint.y + 0.04)
-        let vertex_b:CGPoint = CGPoint(x: touchPoint.x - 0.04, y: touchPoint.y - 0.02)
-        let vertex_c:CGPoint = CGPoint(x: touchPoint.x + 0.04, y: touchPoint.y - 0.02)
+        let vertex_a:CGPoint = CGPoint(x: touchPoint.x, y: touchPoint.y + 0.02)
+        let vertex_b:CGPoint = CGPoint(x: touchPoint.x - 0.02, y: touchPoint.y - 0.01)
+        let vertex_c:CGPoint = CGPoint(x: touchPoint.x + 0.02, y: touchPoint.y - 0.01)
         
         return (vertex_a,vertex_b,vertex_c)
     }
@@ -59,7 +59,7 @@ class Triangle:Primitive {
         
     }
     
-    override func touchLocation(currentTouchLocation: float2) {
-        touchLocation = touchLocation
-    }
+//    override func touchLocation(currentTouchLocation: float2) {
+//        touchLocation = touchLocation
+//    }
 }

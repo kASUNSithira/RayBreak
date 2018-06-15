@@ -23,6 +23,7 @@ protocol Renderable {
 extension Renderable{
     
     func buildPipelineState(device :MTLDevice) -> MTLRenderPipelineState {
+        
         let library = device.makeDefaultLibrary()
         let vertexFunction  = library?.makeFunction(name: vertexFunctionName)
         let fragmentFunction = library?.makeFunction(name: fragmentFunctionName)
@@ -41,13 +42,6 @@ extension Renderable{
         pipelineDescriptor.colorAttachments[0].destinationRGBBlendFactor = .oneMinusSourceAlpha
         pipelineDescriptor.colorAttachments[0].destinationAlphaBlendFactor = .oneMinusSourceAlpha
         
-//        pipelineDescriptor.colorAttachments[0].isBlendingEnabled = true
-//        pipelineDescriptor.colorAttachments[0].rgbBlendOperation = .add
-//        pipelineDescriptor.colorAttachments[0].alphaBlendOperation = .add
-//        pipelineDescriptor.colorAttachments[0].sourceRGBBlendFactor = .destinationAlpha
-//        pipelineDescriptor.colorAttachments[0].sourceAlphaBlendFactor = .destinationAlpha
-//        pipelineDescriptor.colorAttachments[0].destinationRGBBlendFactor = .oneMinusSourceAlpha
-//        pipelineDescriptor.colorAttachments[0].destinationAlphaBlendFactor = .oneMinusBlendAlpha
         pipelineDescriptor.vertexDescriptor = vertexDescriptor
         
         

@@ -12,10 +12,10 @@ enum Colors {
 
 class ViewController: UIViewController {
     var touchPoint:CGPoint = CGPoint(x: 0, y: 0)
-    var state:Int!
+    var state:Int = 0
     
     var metalView: MTKView {
-       
+        
         return view as! MTKView
     }
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         metalView.device = MTLCreateSystemDefaultDevice()
         metalView.framebufferOnly =  false
         metalView.preferredFramesPerSecond = 120
-   
+        
         guard let device = metalView.device else {
             fatalError("Device not created. Run on a physical device")
         }
@@ -38,21 +38,17 @@ class ViewController: UIViewController {
         
         renderer = Renderer(device: device)
         setupGestures()
-
+        
         metalView.delegate = renderer
         
+    }
+
+    func setupGestures(){
         
     }
     
     
- 
     
-    func setupGestures(){
-     
-    }
-    
-    
-
     func convertCoodinates(tapx:CGFloat,tapy:CGFloat) -> CGPoint{
         
         let deviceWidth:CGFloat = CGFloat(self.view.frame.size.width)
@@ -91,11 +87,11 @@ class ViewController: UIViewController {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-         state = 1;
+        state = 1;
         for touch in (touches ){
             let location = touch.location(in: self.view)
             touchPoint = convertCoodinates(tapx:location.x , tapy:location.y )
-            print("touchesEnded:\(touchPoint)")
+            print("touchMoved:\(touchPoint)")
             renderer?.touchReceived(position: touchPoint, state: state)
         }
         
@@ -107,30 +103,34 @@ class ViewController: UIViewController {
         for touch in (touches ){
             let location = touch.location(in: self.view)
             touchPoint = convertCoodinates(tapx:location.x , tapy:location.y )
-             print("touchesEnded:\(touchPoint)")
+            print("touchesEnded:\(touchPoint)")
             renderer?.touchReceived(position: touchPoint, state: state)
             
-            let context = CIContext()
-            let texture = metalView.currentDrawable!.texture
-            let cImg = CIImage(mtlTexture: texture, options: nil)!
-            let cgImg = context.createCGImage(cImg, from: cImg.extent)!
-            let uiImg = UIImage(cgImage: cgImg)
-            print("Texture width:\(texture.width) & height:\(texture.height)")
-            
-            
-            guard let device = metalView.device else {
-                fatalError("Device not created. Run on a physical device")
-            }
-            let textureLoader = MTKTextureLoader(device:device)
-            let imageData: NSData = UIImagePNGRepresentation(uiImg)! as NSData
-            let temTexture = try! textureLoader.newTexture(data: imageData as Data, options: [MTKTextureLoader.Option.allocateMipmaps : (false as NSNumber)])
-            
-            renderer?.changeTexture(texture: temTexture)
+            renderer?.changeTexture(texture: createTextureFromCurrentDrawable())
         }
     }
-
- 
-
+    
+    func createTextureFromCurrentDrawable() ->(MTLTexture){
+        
+        let context = CIContext()
+        var texture = metalView.currentDrawable!.texture
+        let cImg = CIImage(mtlTexture: texture, options: nil)!
+        let cgImg = context.createCGImage(cImg, from: cImg.extent)!
+        let uiImg = UIImage(cgImage: cgImg)
+        print("Texture width:\(texture.width) & height:\(texture.height)")
+        
+        
+        guard let device = metalView.device else {
+            fatalError("Device not created. Run on a physical device")
+        }
+        let textureLoader = MTKTextureLoader(device:device)
+        let imageData: NSData = UIImagePNGRepresentation(uiImg)! as NSData
+        texture = try! textureLoader.newTexture(data: imageData as Data, options: [MTKTextureLoader.Option.allocateMipmaps : (false as NSNumber)])
+        
+        return texture
+    }
+    
+    
     
 }
 

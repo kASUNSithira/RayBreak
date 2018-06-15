@@ -34,6 +34,18 @@ struct VertexOutTexture {
     float2 textureCoordinates;
 };
 
+struct VertexIn3DBrush {
+    float3 position[[attribute(0)]];
+    float4 color [[attribute(1)]] ;
+    float2 textureCoordinates [[attribute(2)]];
+};
+
+struct VertexOut3DBrush {
+    float4 position [[ position]];
+    float4 color ;
+    float2 textureCoordinates;
+};
+
 struct ModelConstant{
     
     float4x4 modelMatrix;
@@ -75,21 +87,34 @@ vertex VertexOutTexture vertex_shader_texture(VertexInTexture vertices [[stage_i
     
 }
 
-fragment float4 fragment_shader_texture(VertexOutTexture vIn [[stage_in]],
+fragment half4 fragment_shader_texture(VertexOutTexture vIn [[stage_in]],
                                        texture2d<float> texture [[texture(0)]]){
    
     constexpr sampler defaultSampler;
     
-    
-    //    float4 color = colorTexture.sample(colorSampler, texcoord);
-    //    if (color.a == 0.0) {
-    //        discard_fragment();
-    //    }
     float4 color = texture.sample(defaultSampler, vIn.textureCoordinates);
-//        if (color.a == 0.0) {
-//            discard_fragment();
-//        }
     
-    return color;
+    
+    return half4(half4(color.r,color.g,color.b,1.0));
 }
 
+vertex VertexOut3DBrush vertex_shader_3DBrush(VertexIn3DBrush vertices [[stage_in]]){
+    
+    VertexOut3DBrush v;
+    v.position =  float4(vertices.position ,1 );
+    v.color = vertices.color;
+    v.textureCoordinates = vertices.textureCoordinates;
+    
+    return v;
+    
+}
+
+fragment half4 fragment_shader_3DBrush(VertexOut3DBrush vIn [[stage_in]],
+                                       texture2d<float> texture [[texture(0)]]){
+    
+    constexpr sampler defaultSampler;
+    
+    float4 color =vIn.color* texture.sample(defaultSampler, vIn.textureCoordinates);
+    
+    return half4(color);
+}

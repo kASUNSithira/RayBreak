@@ -24,7 +24,6 @@ struct TextureVertex {
     var texture:float2
 }
 
-
 struct Constants {
     var animateBy :Float = 0.5
 }

@@ -15,6 +15,5 @@ class Scene: Node {
     func tapReceived(){
         
     }
-    
-    
+
 }

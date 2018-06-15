@@ -5,9 +5,8 @@ class Plane:Primitive {
     
     var texture: MTLTexture?
     var textureVertices:[TextureVertex]!
-    var size: Float = 1.0;
-
     
+
     override var vertexDescriptor: MTLVertexDescriptor!{
         let vertexDescriptor = MTLVertexDescriptor()
         
@@ -31,12 +30,12 @@ class Plane:Primitive {
     
     override func buildVertices(){
         
+        let size: Float = 1.0
         
-        
-        textureVertices = [TextureVertex(position: float3(-size,size ,0), color: float4(0,0,0 ,0),texture:float2(0,0)),
-                    TextureVertex(position: float3(-size, -size ,0), color: float4(0,0,0 ,0),texture:float2(0,1)),
-                    TextureVertex(position: float3(size, -size ,0), color: float4(0,0,0 ,0),texture:float2(1,1)),
-                    TextureVertex(position: float3( size, size ,0), color: float4(0,0,0 ,0),texture:float2(1,0))
+        textureVertices = [TextureVertex(position: float3(-1,1 ,0), color: float4(0,0,0 ,0),texture:float2(0,0)),
+                           TextureVertex(position: float3(-1, -1 ,0), color: float4(0,0,0 ,0),texture:float2(0,1)),
+                           TextureVertex(position: float3(1, -1 ,0), color: float4(0,0,0 ,0),texture:float2(1,1)),
+                           TextureVertex(position: float3( 1, 1 ,0), color: float4(0,0,0 ,0),texture:float2(1,0))
             
         ]
         
@@ -54,12 +53,10 @@ class Plane:Primitive {
         vertexFunctionName = "vertex_shader_texture"
         fragmentFunctionName = "fragment_shader_texture"
         
-        if imageName == "water-3.png" {
-            size = 0.03
-        }
         
-       // self.texture = setTexture(device: device, imageName: imageName)
-         self.texture = imageToTexture(imageNamed: imageName, device: device)
+        
+        //self.texture = setTexture(device: device, imageName: imageName)
+        self.texture = imageToTexture(imageNamed: imageName, device: device)
         
         buildVertices()
         buildBuffers(device: device)
@@ -92,7 +89,7 @@ class Plane:Primitive {
                                              indexBuffer: indexBuffer!,
                                              indexBufferOffset:0)
     }
-    
+   
     func imageToTexture(imageNamed: String, device: MTLDevice) -> MTLTexture {
         let bytesPerPixel = 4
         let bitsPerComponent = 8
@@ -107,28 +104,27 @@ class Plane:Primitive {
         var colorSpace = CGColorSpaceCreateDeviceRGB()
         
         let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: rowBytes, space: colorSpace, bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue).rawValue)
-
+        
         context!.clear(bounds)
         context?.translateBy(x: CGFloat(width), y: CGFloat(height))
-      //  CGContextTranslateCTM(context!, CGFloat(width), CGFloat(height))
+        //  CGContextTranslateCTM(context!, CGFloat(width), CGFloat(height))
         context?.scaleBy(x: -1.0, y: -1.0)
-     //   CGContextScaleCTM(context!, -1.0, -1.0)
+        //   CGContextScaleCTM(context!, -1.0, -1.0)
         context?.draw(image.cgImage!, in: bounds)
-      //  CGContextDrawImage(context, bounds, image.CGImage)
-
+        //  CGContextDrawImage(context, bounds, image.CGImage)
+        
         var texDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .rgba8Unorm, width: width, height: height, mipmapped: false)
-
+        
         var texture = device.makeTexture(descriptor: texDescriptor)
         texture?.label = imageNamed
-
-       // var pixelsData = CGBitmapContextGetData(context!)
+        
+        // var pixelsData = CGBitmapContextGetData(context!)
         var pixelsData = context?.data
         var region = MTLRegionMake2D(0, 0, width, height)
         texture?.replace(region: region, mipmapLevel: 0, withBytes: pixelsData!, bytesPerRow: rowBytes)
-
+        
         return texture!
     }
-   
   
    
 }
