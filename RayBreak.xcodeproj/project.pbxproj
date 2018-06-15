@@ -10,9 +10,38 @@
 		67786F1620D1367A00F8A02A /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67786F1520D1367A00F8A02A /* Square.swift */; };
 		6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6795F85C20CFAA5C0033D9C2 /* aa.jpg */; };
 		67B27CBD20D2739E00D57273 /* neon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CBC20D2739E00D57273 /* neon.png */; };
-		67B27CBF20D2787B00D57273 /* texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CBE20D2787B00D57273 /* texture2.png */; };
-		67B27CC120D27BE000D57273 /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CC020D27BE000D57273 /* texture.jpg */; };
 		67D7D55920D37A1B003C1B3E /* waterColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55820D37A1B003C1B3E /* waterColor.png */; };
+		67D7D57A20D3B17A003C1B3E /* generative-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55C20D3B176003C1B3E /* generative-1.png */; };
+		67D7D57B20D3B17A003C1B3E /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55D20D3B176003C1B3E /* pattern.png */; };
+		67D7D57C20D3B17A003C1B3E /* pencil-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55E20D3B177003C1B3E /* pencil-2.png */; };
+		67D7D57D20D3B17A003C1B3E /* chalk-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55F20D3B177003C1B3E /* chalk-1.png */; };
+		67D7D57E20D3B17A003C1B3E /* water-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56020D3B177003C1B3E /* water-mask.png */; };
+		67D7D57F20D3B17A003C1B3E /* cloud-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56120D3B177003C1B3E /* cloud-3.png */; };
+		67D7D58020D3B17A003C1B3E /* highlighter_sharp-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56220D3B177003C1B3E /* highlighter_sharp-1.png */; };
+		67D7D58120D3B17A003C1B3E /* water-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56320D3B177003C1B3E /* water-2.png */; };
+		67D7D58220D3B17A003C1B3E /* oil-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56420D3B177003C1B3E /* oil-3.png */; };
+		67D7D58320D3B17A003C1B3E /* water-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56520D3B177003C1B3E /* water-1.png */; };
+		67D7D58420D3B17A003C1B3E /* pencil-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56620D3B177003C1B3E /* pencil-4.png */; };
+		67D7D58520D3B17A003C1B3E /* chalk-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56720D3B177003C1B3E /* chalk-2.png */; };
+		67D7D58620D3B17A003C1B3E /* cloud-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56820D3B177003C1B3E /* cloud-1.png */; };
+		67D7D58720D3B17A003C1B3E /* oil-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56920D3B177003C1B3E /* oil-1.png */; };
+		67D7D58820D3B17A003C1B3E /* oil-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56A20D3B177003C1B3E /* oil-2.png */; };
+		67D7D58920D3B17A003C1B3E /* kid-pencil-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56B20D3B178003C1B3E /* kid-pencil-1.png */; };
+		67D7D58A20D3B17A003C1B3E /* kid-watercolor-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56C20D3B178003C1B3E /* kid-watercolor-1.png */; };
+		67D7D58B20D3B17A003C1B3E /* chalk-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56D20D3B178003C1B3E /* chalk-3.png */; };
+		67D7D58C20D3B17A003C1B3E /* spray-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56E20D3B178003C1B3E /* spray-2.png */; };
+		67D7D58D20D3B17A003C1B3E /* neon-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D56F20D3B178003C1B3E /* neon-1.png */; };
+		67D7D58E20D3B17A003C1B3E /* line-pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57020D3B178003C1B3E /* line-pattern.png */; };
+		67D7D58F20D3B17A003C1B3E /* spray-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57120D3B178003C1B3E /* spray-3.png */; };
+		67D7D59020D3B17A003C1B3E /* water-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57220D3B178003C1B3E /* water-3.png */; };
+		67D7D59120D3B17A003C1B3E /* cloud-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57320D3B178003C1B3E /* cloud-2.png */; };
+		67D7D59220D3B17A003C1B3E /* gradient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57420D3B179003C1B3E /* gradient-1.png */; };
+		67D7D59320D3B17A003C1B3E /* highlighter-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57520D3B179003C1B3E /* highlighter-1.png */; };
+		67D7D59420D3B17A003C1B3E /* pen-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57620D3B179003C1B3E /* pen-1.png */; };
+		67D7D59520D3B17A003C1B3E /* pencil-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57720D3B179003C1B3E /* pencil-1.png */; };
+		67D7D59620D3B17A003C1B3E /* pencil-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57820D3B179003C1B3E /* pencil-3.png */; };
+		67D7D59720D3B17A003C1B3E /* spray-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D57920D3B179003C1B3E /* spray-1.png */; };
+		67D7D59B20D3B38E003C1B3E /* 3d.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D59A20D3B38E003C1B3E /* 3d.png */; };
 		78AE0BEF20CA37AB003DE933 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BEE20CA37AB003DE933 /* Shader.metal */; };
 		78AE0BF120CA37D0003DE933 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BF020CA37D0003DE933 /* Renderer.swift */; };
 		78AE0BF320CA37F0003DE933 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE0BF220CA37F0003DE933 /* Types.swift */; };
@@ -37,9 +66,38 @@
 		67786F1520D1367A00F8A02A /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		6795F85C20CFAA5C0033D9C2 /* aa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aa.jpg; sourceTree = "<group>"; };
 		67B27CBC20D2739E00D57273 /* neon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neon.png; sourceTree = "<group>"; };
-		67B27CBE20D2787B00D57273 /* texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture2.png; sourceTree = "<group>"; };
-		67B27CC020D27BE000D57273 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture.jpg; sourceTree = "<group>"; };
 		67D7D55820D37A1B003C1B3E /* waterColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterColor.png; sourceTree = "<group>"; };
+		67D7D55C20D3B176003C1B3E /* generative-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "generative-1.png"; sourceTree = "<group>"; };
+		67D7D55D20D3B176003C1B3E /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
+		67D7D55E20D3B177003C1B3E /* pencil-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-2.png"; sourceTree = "<group>"; };
+		67D7D55F20D3B177003C1B3E /* chalk-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chalk-1.png"; sourceTree = "<group>"; };
+		67D7D56020D3B177003C1B3E /* water-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-mask.png"; sourceTree = "<group>"; };
+		67D7D56120D3B177003C1B3E /* cloud-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-3.png"; sourceTree = "<group>"; };
+		67D7D56220D3B177003C1B3E /* highlighter_sharp-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "highlighter_sharp-1.png"; sourceTree = "<group>"; };
+		67D7D56320D3B177003C1B3E /* water-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-2.png"; sourceTree = "<group>"; };
+		67D7D56420D3B177003C1B3E /* oil-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oil-3.png"; sourceTree = "<group>"; };
+		67D7D56520D3B177003C1B3E /* water-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-1.png"; sourceTree = "<group>"; };
+		67D7D56620D3B177003C1B3E /* pencil-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-4.png"; sourceTree = "<group>"; };
+		67D7D56720D3B177003C1B3E /* chalk-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chalk-2.png"; sourceTree = "<group>"; };
+		67D7D56820D3B177003C1B3E /* cloud-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-1.png"; sourceTree = "<group>"; };
+		67D7D56920D3B177003C1B3E /* oil-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oil-1.png"; sourceTree = "<group>"; };
+		67D7D56A20D3B177003C1B3E /* oil-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "oil-2.png"; sourceTree = "<group>"; };
+		67D7D56B20D3B178003C1B3E /* kid-pencil-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kid-pencil-1.png"; sourceTree = "<group>"; };
+		67D7D56C20D3B178003C1B3E /* kid-watercolor-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kid-watercolor-1.png"; sourceTree = "<group>"; };
+		67D7D56D20D3B178003C1B3E /* chalk-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chalk-3.png"; sourceTree = "<group>"; };
+		67D7D56E20D3B178003C1B3E /* spray-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spray-2.png"; sourceTree = "<group>"; };
+		67D7D56F20D3B178003C1B3E /* neon-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "neon-1.png"; sourceTree = "<group>"; };
+		67D7D57020D3B178003C1B3E /* line-pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line-pattern.png"; sourceTree = "<group>"; };
+		67D7D57120D3B178003C1B3E /* spray-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spray-3.png"; sourceTree = "<group>"; };
+		67D7D57220D3B178003C1B3E /* water-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-3.png"; sourceTree = "<group>"; };
+		67D7D57320D3B178003C1B3E /* cloud-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-2.png"; sourceTree = "<group>"; };
+		67D7D57420D3B179003C1B3E /* gradient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient-1.png"; sourceTree = "<group>"; };
+		67D7D57520D3B179003C1B3E /* highlighter-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "highlighter-1.png"; sourceTree = "<group>"; };
+		67D7D57620D3B179003C1B3E /* pen-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pen-1.png"; sourceTree = "<group>"; };
+		67D7D57720D3B179003C1B3E /* pencil-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-1.png"; sourceTree = "<group>"; };
+		67D7D57820D3B179003C1B3E /* pencil-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pencil-3.png"; sourceTree = "<group>"; };
+		67D7D57920D3B179003C1B3E /* spray-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spray-1.png"; sourceTree = "<group>"; };
+		67D7D59A20D3B38E003C1B3E /* 3d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3d.png; sourceTree = "<group>"; };
 		78AE0BEE20CA37AB003DE933 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		78AE0BF020CA37D0003DE933 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		78AE0BF220CA37F0003DE933 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
@@ -76,13 +134,66 @@
 		67B95AB920CE30F8009452CF /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				67D7D55820D37A1B003C1B3E /* waterColor.png */,
-				67B27CBC20D2739E00D57273 /* neon.png */,
-				67B27CC020D27BE000D57273 /* texture.jpg */,
-				67B27CBE20D2787B00D57273 /* texture2.png */,
-				6795F85C20CFAA5C0033D9C2 /* aa.jpg */,
+				67D7D59820D3B35D003C1B3E /* DrawingBrushes */,
+				67D7D59920D3B37B003C1B3E /* 3DBrushes */,
+				67D7D59C20D3B3AA003C1B3E /* Background */,
 			);
 			path = Resourses;
+			sourceTree = "<group>";
+		};
+		67D7D59820D3B35D003C1B3E /* DrawingBrushes */ = {
+			isa = PBXGroup;
+			children = (
+				67D7D55F20D3B177003C1B3E /* chalk-1.png */,
+				67D7D56720D3B177003C1B3E /* chalk-2.png */,
+				67D7D56D20D3B178003C1B3E /* chalk-3.png */,
+				67D7D56820D3B177003C1B3E /* cloud-1.png */,
+				67D7D57320D3B178003C1B3E /* cloud-2.png */,
+				67D7D56120D3B177003C1B3E /* cloud-3.png */,
+				67D7D55C20D3B176003C1B3E /* generative-1.png */,
+				67D7D57420D3B179003C1B3E /* gradient-1.png */,
+				67D7D56220D3B177003C1B3E /* highlighter_sharp-1.png */,
+				67D7D57520D3B179003C1B3E /* highlighter-1.png */,
+				67D7D56B20D3B178003C1B3E /* kid-pencil-1.png */,
+				67D7D56C20D3B178003C1B3E /* kid-watercolor-1.png */,
+				67D7D57020D3B178003C1B3E /* line-pattern.png */,
+				67D7D56F20D3B178003C1B3E /* neon-1.png */,
+				67D7D56920D3B177003C1B3E /* oil-1.png */,
+				67D7D56A20D3B177003C1B3E /* oil-2.png */,
+				67D7D56420D3B177003C1B3E /* oil-3.png */,
+				67D7D55D20D3B176003C1B3E /* pattern.png */,
+				67D7D57620D3B179003C1B3E /* pen-1.png */,
+				67D7D57720D3B179003C1B3E /* pencil-1.png */,
+				67D7D55E20D3B177003C1B3E /* pencil-2.png */,
+				67D7D57820D3B179003C1B3E /* pencil-3.png */,
+				67D7D56620D3B177003C1B3E /* pencil-4.png */,
+				67D7D57920D3B179003C1B3E /* spray-1.png */,
+				67D7D56E20D3B178003C1B3E /* spray-2.png */,
+				67D7D57120D3B178003C1B3E /* spray-3.png */,
+				67D7D56520D3B177003C1B3E /* water-1.png */,
+				67D7D56320D3B177003C1B3E /* water-2.png */,
+				67D7D57220D3B178003C1B3E /* water-3.png */,
+				67D7D56020D3B177003C1B3E /* water-mask.png */,
+				67D7D55820D37A1B003C1B3E /* waterColor.png */,
+				67B27CBC20D2739E00D57273 /* neon.png */,
+			);
+			path = DrawingBrushes;
+			sourceTree = "<group>";
+		};
+		67D7D59920D3B37B003C1B3E /* 3DBrushes */ = {
+			isa = PBXGroup;
+			children = (
+				67D7D59A20D3B38E003C1B3E /* 3d.png */,
+			);
+			path = 3DBrushes;
+			sourceTree = "<group>";
+		};
+		67D7D59C20D3B3AA003C1B3E /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				6795F85C20CFAA5C0033D9C2 /* aa.jpg */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 		78AE0BF420CA380B003DE933 /* Node */ = {
@@ -213,14 +324,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D7D58120D3B17A003C1B3E /* water-2.png in Resources */,
+				67D7D57C20D3B17A003C1B3E /* pencil-2.png in Resources */,
+				67D7D58820D3B17A003C1B3E /* oil-2.png in Resources */,
+				67D7D58B20D3B17A003C1B3E /* chalk-3.png in Resources */,
+				67D7D58620D3B17A003C1B3E /* cloud-1.png in Resources */,
+				67D7D59020D3B17A003C1B3E /* water-3.png in Resources */,
+				67D7D57F20D3B17A003C1B3E /* cloud-3.png in Resources */,
 				827F9E3F1DB09E7C001966D9 /* LaunchScreen.storyboard in Resources */,
+				67D7D58F20D3B17A003C1B3E /* spray-3.png in Resources */,
+				67D7D59B20D3B38E003C1B3E /* 3d.png in Resources */,
+				67D7D59620D3B17A003C1B3E /* pencil-3.png in Resources */,
+				67D7D59320D3B17A003C1B3E /* highlighter-1.png in Resources */,
+				67D7D58E20D3B17A003C1B3E /* line-pattern.png in Resources */,
+				67D7D58A20D3B17A003C1B3E /* kid-watercolor-1.png in Resources */,
+				67D7D57E20D3B17A003C1B3E /* water-mask.png in Resources */,
+				67D7D58220D3B17A003C1B3E /* oil-3.png in Resources */,
+				67D7D58020D3B17A003C1B3E /* highlighter_sharp-1.png in Resources */,
+				67D7D58D20D3B17A003C1B3E /* neon-1.png in Resources */,
+				67D7D58920D3B17A003C1B3E /* kid-pencil-1.png in Resources */,
+				67D7D59220D3B17A003C1B3E /* gradient-1.png in Resources */,
 				67D7D55920D37A1B003C1B3E /* waterColor.png in Resources */,
-				67B27CBF20D2787B00D57273 /* texture2.png in Resources */,
+				67D7D58C20D3B17A003C1B3E /* spray-2.png in Resources */,
+				67D7D58420D3B17A003C1B3E /* pencil-4.png in Resources */,
+				67D7D59420D3B17A003C1B3E /* pen-1.png in Resources */,
+				67D7D57D20D3B17A003C1B3E /* chalk-1.png in Resources */,
+				67D7D59120D3B17A003C1B3E /* cloud-2.png in Resources */,
+				67D7D57B20D3B17A003C1B3E /* pattern.png in Resources */,
 				6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */,
 				67B27CBD20D2739E00D57273 /* neon.png in Resources */,
-				67B27CC120D27BE000D57273 /* texture.jpg in Resources */,
+				67D7D59520D3B17A003C1B3E /* pencil-1.png in Resources */,
+				67D7D58320D3B17A003C1B3E /* water-1.png in Resources */,
+				67D7D59720D3B17A003C1B3E /* spray-1.png in Resources */,
+				67D7D58520D3B17A003C1B3E /* chalk-2.png in Resources */,
+				67D7D58720D3B17A003C1B3E /* oil-1.png in Resources */,
 				827F9E3C1DB09E7C001966D9 /* Assets.xcassets in Resources */,
 				827F9E3A1DB09E7C001966D9 /* Main.storyboard in Resources */,
+				67D7D57A20D3B17A003C1B3E /* generative-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

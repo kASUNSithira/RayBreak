@@ -4,6 +4,11 @@ import MetalKit
 class TempScene:Scene {
     
     //let plane :Plane!
+    let redColorComponent:Float = 0.94
+    let greenColorComponent:Float = 0.66
+    let blueColorComponent:Float = 0.84
+    let opacity:Float = 1.0
+    
  
     override init(device: MTLDevice, touchPoint:CGPoint) {
      
@@ -15,11 +20,10 @@ class TempScene:Scene {
     
      func appendChild(touchPoint:CGPoint) {
  
-        
 //        let triangle = Triangle(device: super.device, color: float4(0.25,0.75,0.75,1.0),touchPoint:touchPoint)
 //        add(child: triangle)
         
-       let square = Square(device: super.device, color: float4(0.24,0.26,0.76,1.0),touchPoint:touchPoint, imageName: "waterColor.png")
+       let square = Square(device: super.device, color: float4(redColorComponent,greenColorComponent,blueColorComponent,opacity),touchPoint:touchPoint, imageName: "water-mask.png")
         add(child: square)
    
         

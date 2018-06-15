@@ -7,6 +7,7 @@ class Square: Primitive {
     
     var texture: MTLTexture?
     var textureVertices:[TextureVertex]!
+    let brushThickness:CGFloat =  0.04
     
     override var vertexDescriptor: MTLVertexDescriptor!{
         let vertexDescriptor = MTLVertexDescriptor()
@@ -31,10 +32,10 @@ class Square: Primitive {
     
     private func genarateVertices(touchPoint:CGPoint) ->(a:CGPoint ,b:CGPoint, c:CGPoint, d:CGPoint){
         
-        let vertex_a:CGPoint = CGPoint(x: touchPoint.x - 0.04, y: touchPoint.y + 0.04)
-        let vertex_b:CGPoint = CGPoint(x: touchPoint.x - 0.04, y: touchPoint.y - 0.04)
-        let vertex_c:CGPoint = CGPoint(x: touchPoint.x + 0.04, y: touchPoint.y - 0.04)
-        let vertex_d:CGPoint = CGPoint(x: touchPoint.x + 0.04, y: touchPoint.y + 0.04)
+        let vertex_a:CGPoint = CGPoint(x: touchPoint.x - brushThickness, y: touchPoint.y + brushThickness)
+        let vertex_b:CGPoint = CGPoint(x: touchPoint.x - brushThickness, y: touchPoint.y - brushThickness)
+        let vertex_c:CGPoint = CGPoint(x: touchPoint.x + brushThickness, y: touchPoint.y - brushThickness)
+        let vertex_d:CGPoint = CGPoint(x: touchPoint.x + brushThickness, y: touchPoint.y + brushThickness)
         
         return (vertex_a,vertex_b,vertex_c,vertex_d)
     }

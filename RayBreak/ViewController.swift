@@ -46,9 +46,7 @@ class ViewController: UIViewController {
     func setupGestures(){
         
     }
-    
-    
-    
+
     func convertCoodinates(tapx:CGFloat,tapy:CGFloat) -> CGPoint{
         
         let deviceWidth:CGFloat = CGFloat(self.view.frame.size.width)
