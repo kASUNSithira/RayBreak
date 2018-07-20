@@ -7,6 +7,7 @@ class Primitive: Node {
 
     var fragmentFunctionName: String
     var vertexFunctionName: String
+    
     var vertexDescriptor: MTLVertexDescriptor! {
         let vertexDescriptor = MTLVertexDescriptor()
 
@@ -36,7 +37,8 @@ class Primitive: Node {
     var vertexBuffer: MTLBuffer!
     var indexBuffer: MTLBuffer!
 
-  //  var modelConstants = ModelConstants()
+    var modelConstants = ModelConstants()
+    var sceneConstants = ScenceConstants()
     
     init(device: MTLDevice) {
         
@@ -96,7 +98,7 @@ class Primitive: Node {
         commandEncoder.setRenderPipelineState(renderPipelineState!)
         commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
 
-   //     commandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1)
+   //   commandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1)
 
         commandEncoder.drawIndexedPrimitives(type: .triangle,
                                              indexCount: indices.count,
@@ -110,8 +112,6 @@ class Primitive: Node {
 
 
 extension Primitive: Renderable {
-
-
 
 
 }

@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6700D50620DD00C7005CDC66 /* UIView+Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700D50520DD00C7005CDC66 /* UIView+Z.swift */; };
+		6700D50820DD01C1005CDC66 /* CoreGraphics+Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6700D50720DD01C1005CDC66 /* CoreGraphics+Z.swift */; };
 		67786F1620D1367A00F8A02A /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67786F1520D1367A00F8A02A /* Square.swift */; };
+		677B37BC20ECF0F700BDBCDE /* plainWhiteBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 677B37BB20ECF0F700BDBCDE /* plainWhiteBackground.jpg */; };
 		6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6795F85C20CFAA5C0033D9C2 /* aa.jpg */; };
+		67A731A420EB6B3400B95ADE /* blurred_lines.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 67A731A320EB6B3400B95ADE /* blurred_lines.jpeg */; };
 		67B27CBD20D2739E00D57273 /* neon.png in Resources */ = {isa = PBXBuildFile; fileRef = 67B27CBC20D2739E00D57273 /* neon.png */; };
 		67D7D55920D37A1B003C1B3E /* waterColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55820D37A1B003C1B3E /* waterColor.png */; };
 		67D7D57A20D3B17A003C1B3E /* generative-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D7D55C20D3B176003C1B3E /* generative-1.png */; };
@@ -63,8 +67,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6700D50520DD00C7005CDC66 /* UIView+Z.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Z.swift"; sourceTree = "<group>"; };
+		6700D50720DD01C1005CDC66 /* CoreGraphics+Z.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Z.swift"; sourceTree = "<group>"; };
 		67786F1520D1367A00F8A02A /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		677B37BB20ECF0F700BDBCDE /* plainWhiteBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = plainWhiteBackground.jpg; sourceTree = "<group>"; };
 		6795F85C20CFAA5C0033D9C2 /* aa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aa.jpg; sourceTree = "<group>"; };
+		67A731A320EB6B3400B95ADE /* blurred_lines.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blurred_lines.jpeg; sourceTree = "<group>"; };
 		67B27CBC20D2739E00D57273 /* neon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neon.png; sourceTree = "<group>"; };
 		67D7D55820D37A1B003C1B3E /* waterColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waterColor.png; sourceTree = "<group>"; };
 		67D7D55C20D3B176003C1B3E /* generative-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "generative-1.png"; sourceTree = "<group>"; };
@@ -191,7 +199,9 @@
 		67D7D59C20D3B3AA003C1B3E /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				677B37BB20ECF0F700BDBCDE /* plainWhiteBackground.jpg */,
 				6795F85C20CFAA5C0033D9C2 /* aa.jpg */,
+				67A731A320EB6B3400B95ADE /* blurred_lines.jpeg */,
 			);
 			path = Background;
 			sourceTree = "<group>";
@@ -251,6 +261,8 @@
 				78AE0BF420CA380B003DE933 /* Node */,
 				827F9E341DB09E7C001966D9 /* AppDelegate.swift */,
 				827F9E361DB09E7C001966D9 /* ViewController.swift */,
+				6700D50520DD00C7005CDC66 /* UIView+Z.swift */,
+				6700D50720DD01C1005CDC66 /* CoreGraphics+Z.swift */,
 				827F9E381DB09E7C001966D9 /* Main.storyboard */,
 				827F9E3B1DB09E7C001966D9 /* Assets.xcassets */,
 				827F9E3D1DB09E7C001966D9 /* LaunchScreen.storyboard */,
@@ -330,6 +342,7 @@
 				67D7D58B20D3B17A003C1B3E /* chalk-3.png in Resources */,
 				67D7D58620D3B17A003C1B3E /* cloud-1.png in Resources */,
 				67D7D59020D3B17A003C1B3E /* water-3.png in Resources */,
+				67A731A420EB6B3400B95ADE /* blurred_lines.jpeg in Resources */,
 				67D7D57F20D3B17A003C1B3E /* cloud-3.png in Resources */,
 				827F9E3F1DB09E7C001966D9 /* LaunchScreen.storyboard in Resources */,
 				67D7D58F20D3B17A003C1B3E /* spray-3.png in Resources */,
@@ -353,6 +366,7 @@
 				67D7D57B20D3B17A003C1B3E /* pattern.png in Resources */,
 				6795F85D20CFAA5C0033D9C2 /* aa.jpg in Resources */,
 				67B27CBD20D2739E00D57273 /* neon.png in Resources */,
+				677B37BC20ECF0F700BDBCDE /* plainWhiteBackground.jpg in Resources */,
 				67D7D59520D3B17A003C1B3E /* pencil-1.png in Resources */,
 				67D7D58320D3B17A003C1B3E /* water-1.png in Resources */,
 				67D7D59720D3B17A003C1B3E /* spray-1.png in Resources */,
@@ -376,10 +390,12 @@
 				827F9E371DB09E7C001966D9 /* ViewController.swift in Sources */,
 				78AE0BFF20CA3895003DE933 /* Maths.swift in Sources */,
 				78AE0C0F20CA80AF003DE933 /* Texturable.swift in Sources */,
+				6700D50620DD00C7005CDC66 /* UIView+Z.swift in Sources */,
 				78AE0BFC20CA3870003DE933 /* Triangle.swift in Sources */,
 				78AE0BFA20CA3853003DE933 /* Primitive.swift in Sources */,
 				78AE0BF620CA381B003DE933 /* Node.swift in Sources */,
 				67786F1620D1367A00F8A02A /* Square.swift in Sources */,
+				6700D50820DD01C1005CDC66 /* CoreGraphics+Z.swift in Sources */,
 				78AE0BF320CA37F0003DE933 /* Types.swift in Sources */,
 				78AE0C0520CA38DC003DE933 /* Scene.swift in Sources */,
 				78AE0C0B20CA3ACA003DE933 /* Renderable.swift in Sources */,
@@ -511,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69PLJFK56W;
 				INFOPLIST_FILE = RayBreak/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caroline.RayBreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 69PLJFK56W;
 				INFOPLIST_FILE = RayBreak/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caroline.RayBreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";

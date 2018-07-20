@@ -4,8 +4,14 @@ import MetalKit
 class Plane:Primitive {
     
     var texture: MTLTexture?
+    var temporyDrawableImage :UIImage?
     var textureVertices:[TextureVertex]!
-    
+    var currentScaleFactor:Float = 1.0
+    var previousScaleFactor:Float = 1.0
+    var previousScaleFactorForOverZooming:Float = 1.0
+    var resizeCanvasAfterInitialZooming:Bool = true
+    var resizeCanvasWhenEverZoomingHappens = false
+    var coordinateScaledRatio:Float = 1.0
 
     override var vertexDescriptor: MTLVertexDescriptor!{
         let vertexDescriptor = MTLVertexDescriptor()
@@ -36,7 +42,6 @@ class Plane:Primitive {
                            TextureVertex(position: float3(-1, -1 ,0), color: float4(0,0,0 ,0),texture:float2(0,1)),
                            TextureVertex(position: float3(1, -1 ,0), color: float4(0,0,0 ,0),texture:float2(1,1)),
                            TextureVertex(position: float3( 1, 1 ,0), color: float4(0,0,0 ,0),texture:float2(1,0))
-            
         ]
         
         indices = [
@@ -49,27 +54,49 @@ class Plane:Primitive {
     init(device: MTLDevice , imageName : String) {
       
        super.init(device: device)
-        
+
         vertexFunctionName = "vertex_shader_texture"
         fragmentFunctionName = "fragment_shader_texture"
         
+        sceneConstants.projectionMatrix = matrix_float4x4(prespectiveDegreesFov:45, aspectRatio:Float(1536.0 / 2048.0),nearZ:0.1,farZ:100)
         
+        modelConstants.modelMatrix.translate(direction: float3(0,0,-1))
+        //modelConstants.modelMatrix.translate(direction: float3(Float(0.5),Float(0),Float(0)))
+         modelConstants.modelMatrix.scale(axis: float3(0.5,0.5,0))
+        //print("Model Matrix:\(modelConstants.modelMatrix.columns.3)")
+       
         
-        //self.texture = setTexture(device: device, imageName: imageName)
-        self.texture = imageToTexture(imageNamed: imageName, device: device)
+        self.texture = setTexture(device: device, imageName: imageName)
+       //self.texture = imageToTexture(imageNamed: imageName, device: device)
         
         buildVertices()
         buildBuffers(device: device)
         renderPipelineState =  buildPipelineState(device: device)
         
     }
-    
-    func changeTexture(device: MTLDevice , texture:MTLTexture){
-      
-        self.texture = texture
-
+   // MARK:update Canvas
+    func updateCanvas(texture:MTLTexture )  {
+         self.texture = texture
+    }
+  
+ // MARK:
+    func zoomCanvas(currentDrawableScaleFactor:Float) {
+        modelConstants.modelMatrix.scale(axis: float3(currentDrawableScaleFactor,currentDrawableScaleFactor,1))
     }
     
+    func rotateCanvas(rotation:Float){
+        modelConstants.modelMatrix.rotate(angle:rotation, axis: float3(0,0,1))
+    }
+    
+    func dargCanvas(axis:float3 ){
+        modelConstants.modelMatrix.translate(direction: axis)
+    }
+    
+    func modelConstant(modelConstants:ModelConstants){
+        self.modelConstants = modelConstants
+    }
+    // MARK:Commands
+
     override func buildBuffers(device: MTLDevice) {
         vertexBuffer = device.makeBuffer(bytes: textureVertices!, length: (textureVertices?.count)! *   MemoryLayout<TextureVertex>.stride , options: [])
         
@@ -80,7 +107,10 @@ class Plane:Primitive {
         commandEncoder.setRenderPipelineState(renderPipelineState!)
         commandEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         
-        //     commandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1)
+        commandEncoder.setVertexBytes(&modelConstants, length: MemoryLayout<ModelConstants>.stride, index: 1)
+    
+        commandEncoder.setVertexBytes(&sceneConstants, length: MemoryLayout<ScenceConstants>.stride, index: 2)
+    
         commandEncoder.setFragmentTexture(texture, index: 0)
         
         commandEncoder.drawIndexedPrimitives(type: .triangle,
@@ -89,43 +119,6 @@ class Plane:Primitive {
                                              indexBuffer: indexBuffer!,
                                              indexBufferOffset:0)
     }
-   
-    func imageToTexture(imageNamed: String, device: MTLDevice) -> MTLTexture {
-        let bytesPerPixel = 4
-        let bitsPerComponent = 8
-        
-        var image = UIImage(named: imageNamed)!
-        
-        let width = Int(image.size.width)
-        let height = Int(image.size.height)
-        
-        let bounds = CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height))
-        var rowBytes = width * bytesPerPixel
-        var colorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: bitsPerComponent, bytesPerRow: rowBytes, space: colorSpace, bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue).rawValue)
-        
-        context!.clear(bounds)
-        context?.translateBy(x: CGFloat(width), y: CGFloat(height))
-        //  CGContextTranslateCTM(context!, CGFloat(width), CGFloat(height))
-        context?.scaleBy(x: -1.0, y: -1.0)
-        //   CGContextScaleCTM(context!, -1.0, -1.0)
-        context?.draw(image.cgImage!, in: bounds)
-        //  CGContextDrawImage(context, bounds, image.CGImage)
-        
-        var texDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .rgba8Unorm, width: width, height: height, mipmapped: false)
-        
-        var texture = device.makeTexture(descriptor: texDescriptor)
-        texture?.label = imageNamed
-        
-        // var pixelsData = CGBitmapContextGetData(context!)
-        var pixelsData = context?.data
-        var region = MTLRegionMake2D(0, 0, width, height)
-        texture?.replace(region: region, mipmapLevel: 0, withBytes: pixelsData!, bytesPerRow: rowBytes)
-        
-        return texture!
-    }
-  
    
 }
 

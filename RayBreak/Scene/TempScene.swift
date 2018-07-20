@@ -4,8 +4,8 @@ import MetalKit
 class TempScene:Scene {
     
     //let plane :Plane!
-    let redColorComponent:Float = 0.94
-    let greenColorComponent:Float = 0.66
+    let redColorComponent:Float = 0.26
+    let greenColorComponent:Float = 0.47
     let blueColorComponent:Float = 0.84
     let opacity:Float = 1.0
     

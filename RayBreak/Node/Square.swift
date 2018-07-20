@@ -7,7 +7,7 @@ class Square: Primitive {
     
     var texture: MTLTexture?
     var textureVertices:[TextureVertex]!
-    let brushThickness:CGFloat =  0.04
+    let brushThickness:CGFloat =  0.02
     
     override var vertexDescriptor: MTLVertexDescriptor!{
         let vertexDescriptor = MTLVertexDescriptor()
@@ -64,12 +64,12 @@ class Square: Primitive {
         self.color = color
         self.touchpoint = touchPoint
         super.init(device: device)
-        
+     
         vertexFunctionName = "vertex_shader_3DBrush"
         fragmentFunctionName = "fragment_shader_3DBrush"
      
-        self.texture = setTexture(device: device, imageName: imageName)
-        self.texture = imageToTexture(imageNamed: imageName, device: device)
+      //  self.texture = setTexture(device: device, imageName: imageName)
+         self.texture = imageToTexture(imageNamed: imageName, device: device)
       
         buildVertices()
         buildBuffers(device: device)

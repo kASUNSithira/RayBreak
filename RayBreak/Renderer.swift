@@ -22,60 +22,79 @@ class Renderer: NSObject {
         scenes.append(basePlane)
     }
     
-    func changeTexture(texture:MTLTexture){
-        var count:Int = 0
+    func zoomCanvas(currentDrawableScaleFactor:Float)  {
+        basePlane.zoomCanvas(currentDrawableScaleFactor: currentDrawableScaleFactor)
+    }
+    
+    func rotateCanvas(rotation:Float){
+        basePlane.rotateCanvas(rotation: rotation)
+    }
+    
+    func dargCanvas(axis:float3){
+        basePlane.dargCanvas(axis: axis)
+    }
+    
+    func modelConstant(modelConstants:ModelConstants){
+        basePlane.modelConstant(modelConstants: modelConstants)
+    }
+    
+    func updateCanvas(texture:MTLTexture )  {
+        basePlane.updateCanvas(texture: texture)
+    }
+    
+    
+    
+    func changeTexture(){
+      
         for scene in scenes {
             if scene is TempScene{
-                if count < scenes.count{
-                    scenes.remove(at: count)
-                    count += 0
-                }
+                scenes.remove(at: 1)
             }else{
-                print("Base class")
-                count += 1
-                basePlane.changeTextureofthePlane(device: device, texture: texture)
+                print("Inherited from BasicScene")
             }
-            
         }
-        
+    }
+    func apendScene(position:CGPoint)  {
+         scenes.append(TempScene(device: device, touchPoint: position))
     }
     
     func touchReceived(position:CGPoint , state: Int){
         
-        scenes.append(TempScene(device: device, touchPoint: position))
-        
-        if state == 0 {
-            print("drawing Started")
-            pointIndex = 0
-            lastPoint = position;
-            print(touchedArray)
-            touchedArray[pointIndex] = DMETouch(touchPoint: float3(Float(position.x),Float(position.y),0.0))
-            print(touchedArray)
-            
-        }else if state == 1 {
-            print("drawing Moving")
-            let movedDistance:CGFloat = position.distance(toPoint: lastPoint);
-            print("movedDistance:\(movedDistance)")
-            pointIndex = pointIndex + 1
-            lastPoint = position
-            
-            if pointIndex > 2 {
-                
-                if pointIndex % 2 == 1 {
-                    
-                }
-            }
-            
-        }else {
-            print("drawing Finished")
-        }
+//        if state == 0 {
+//            print("drawing Started")
+//            pointIndex = 0
+//            lastPoint = position;
+//            print(touchedArray)
+//            touchedArray[pointIndex] = DMETouch(touchPoint: float3(Float(position.x),Float(position.y),0.0))
+//            print(touchedArray)
+//            
+//        }else if state == 1 {
+//            print("drawing Moving")
+//            let movedDistance:CGFloat = position.distance(toPoint: lastPoint);
+//            print("movedDistance:\(movedDistance)")
+//            pointIndex = pointIndex + 1
+//            lastPoint = position
+//            
+//            if pointIndex > 2 {
+//                
+//                if pointIndex % 2 == 1 {
+//                    
+//                }
+//            }
+//            
+//        }else {
+//            print("drawing Finished")
+//        }
         
     }
     
 }
 
 extension Renderer: MTKViewDelegate {
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) { }
+    
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        print("current drawable size:\(view.drawableSize)")
+    }
     
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable,
@@ -83,7 +102,6 @@ extension Renderer: MTKViewDelegate {
         
         let commandBuffer = commandQueue.makeCommandBuffer()
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: descriptor)
-        
         
         
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)

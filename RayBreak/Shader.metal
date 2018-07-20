@@ -52,6 +52,12 @@ struct ModelConstant{
     
 };
 
+struct SceneConstant{
+    
+    float4x4 projectionMatrix;
+    
+};
+
 
 struct Constants{
     float animateBy;
@@ -75,10 +81,13 @@ fragment half4 fragment_shader(VertexOut vIn [[stage_in]]){
 
 
 
-vertex VertexOutTexture vertex_shader_texture(VertexInTexture vertices [[stage_in]]){
+vertex VertexOutTexture vertex_shader_texture(const VertexInTexture vertices [[stage_in]],
+                                              constant ModelConstant &modelConstants[[buffer(1)]],
+                                              constant SceneConstant &sceneConstants[[buffer(2) ]] ){
     
     VertexOutTexture v;
-    v.position =  float4(vertices.position ,1 );
+    v.position = sceneConstants.projectionMatrix* modelConstants.modelMatrix*float4(vertices.position ,1 );
+  //  v.position =  modelConstants.modelMatrix*float4(vertices.position,1);
     //v.position.xy += cos(constants.animateBy);
     v.color = vertices.color;
     v.textureCoordinates = vertices.textureCoordinates;
@@ -92,7 +101,7 @@ fragment half4 fragment_shader_texture(VertexOutTexture vIn [[stage_in]],
    
     constexpr sampler defaultSampler;
     
-    float4 color = texture.sample(defaultSampler, vIn.textureCoordinates);
+    float4 color =  texture.sample(defaultSampler, vIn.textureCoordinates);
     
     
     return half4(half4(color.r,color.g,color.b,1.0));

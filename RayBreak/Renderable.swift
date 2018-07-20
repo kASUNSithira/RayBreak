@@ -24,6 +24,16 @@ extension Renderable{
     
     func buildPipelineState(device :MTLDevice) -> MTLRenderPipelineState {
         
+        
+//        let library:MTLLibrary
+//       let options = MTLCompileOptions()
+//        options.fastMathEnabled = false
+//
+//        do {
+//            library = try! device.makeLibrary(source:"Shader", options: options)
+//        }catch let error as NSError{
+//            print(error)
+//        }
         let library = device.makeDefaultLibrary()
         let vertexFunction  = library?.makeFunction(name: vertexFunctionName)
         let fragmentFunction = library?.makeFunction(name: fragmentFunctionName)
@@ -33,6 +43,7 @@ extension Renderable{
         pipelineDescriptor.vertexFunction = vertexFunction
         pipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
 
+
        
         pipelineDescriptor.colorAttachments[0].isBlendingEnabled = true
         pipelineDescriptor.colorAttachments[0].rgbBlendOperation = .add
@@ -41,6 +52,9 @@ extension Renderable{
         pipelineDescriptor.colorAttachments[0].sourceAlphaBlendFactor = .one
         pipelineDescriptor.colorAttachments[0].destinationRGBBlendFactor = .oneMinusSourceAlpha
         pipelineDescriptor.colorAttachments[0].destinationAlphaBlendFactor = .oneMinusSourceAlpha
+        
+        
+        
         
         pipelineDescriptor.vertexDescriptor = vertexDescriptor
         

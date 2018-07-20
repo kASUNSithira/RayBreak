@@ -8,6 +8,7 @@
 
 import Foundation
 import simd
+import GLKit
 
 struct Vertex {
     var position: float3
@@ -30,4 +31,12 @@ struct Constants {
 
 struct ModelConstants {
     var modelMatrix = matrix_identity_float4x4
+}
+
+struct ScenceConstants {
+    var projectionMatrix = matrix_identity_float4x4
+}
+
+struct TransformationMatrix {
+    var transformationMatrix = _GLKMatrix4()
 }

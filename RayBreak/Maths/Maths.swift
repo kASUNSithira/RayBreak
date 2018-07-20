@@ -7,28 +7,52 @@
 //
 
 import MetalKit
+import simd
+import GLKit
 
+func radians(fromDegrees degrees:Float) ->Float{
+    return (degrees/100)*Float(Double.pi)
+}
 extension matrix_float4x4 {
     
+    init(prespectiveDegreesFov degreesFov:Float, aspectRatio:Float,nearZ:Float,farZ:Float){
+       let  fov = radians(fromDegrees: degreesFov)
+        
+        let y = 1/tan(fov*0.5)
+        let x = y/aspectRatio
+        let z1 = farZ/(nearZ - farZ)
+        let w = (z1*nearZ)
+        
+        columns = (
+            float4(x,  0,  0,  0),
+            float4(0,  y,  0,  0),
+            float4(0,  0,  z1,-1),
+            float4(0,  0,  w,  0)
+        )
+    }
+    
+ 
     
     mutating func scale(axis: float3){
         
         var result = matrix_identity_float4x4
-        
         let x :Float  = axis.x
         let y :Float  = axis.y
         let z :Float  = axis.z
         
         
         result.columns = (
+            
             float4(x,0,0,0),
             float4(0,y,0,0),
             float4(0,0,z,0),
             float4(0,0,0,1)
         )
+        
+        print("self:\(self)")
         self = matrix_multiply(self, result)
+        
     }
-    
     
     
     mutating func translate(direction: float3){
@@ -46,6 +70,7 @@ extension matrix_float4x4 {
             float4(0,0,1,0),
             float4(x,y,z,1)
         )
+        print("self:\(self)")
         self = matrix_multiply(self, result)
     }
     
@@ -90,6 +115,7 @@ extension matrix_float4x4 {
             float4(r1c3,r2c3,r3c3,r4c3),
             float4(r1c4,r2c4,r3c4,r4c4)
         )
+        print("Result:\(result)")
         self = matrix_multiply(self, result)
     }
     
